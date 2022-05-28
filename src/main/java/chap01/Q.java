@@ -51,6 +51,15 @@ public class Q {
 			return (int) ((1 + n) * n / 2);
 		}
 	}
+
+	static int sumOf(int a, int b) {
+		int sum = 0;
+		for (int i = a; i <= b; i++) {
+			sum += i;
+		}
+		return sum;
+	}
+
 	public static void main(String[] args) {
 		System.out.println(max4(1, 3, 4, 2));
 		System.out.println(min3(1, 3, 4));
@@ -58,5 +67,6 @@ public class Q {
 		System.out.println(med3(1, 3, 2));
 		sumFor(7);
 		System.out.println(gaussSum(10));
+		System.out.println(sumOf(3, 5));
 	}
 }
