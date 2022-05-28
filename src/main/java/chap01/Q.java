@@ -45,11 +45,18 @@ public class Q {
 		System.out.println("1부터 " + n + "까지의 합은 " + sum + "입니다.");
 	}
 
+	static int gaussSum(int n) {
+		if (n == 1) return 1;
+		else {
+			return (int) ((1 + n) * n / 2);
+		}
+	}
 	public static void main(String[] args) {
 		System.out.println(max4(1, 3, 4, 2));
 		System.out.println(min3(1, 3, 4));
 		System.out.println(min4(1, 3, 4, 2));
 		System.out.println(med3(1, 3, 2));
 		sumFor(7);
+		System.out.println(gaussSum(10));
 	}
 }
