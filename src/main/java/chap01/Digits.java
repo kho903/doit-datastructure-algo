@@ -12,7 +12,7 @@ public class Digits {
 		do {
 			System.out.print("입력 : ");
 			n = sc.nextInt();
-		} while (n < 10 || n > 99);
+		} while (!(n >= 10 && n <= 99));
 
 		System.out.println("변수 n의 값은 " + n + "입니다.");
 	}
