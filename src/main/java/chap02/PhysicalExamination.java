@@ -34,10 +34,10 @@ public class PhysicalExamination {
 	public static void main(String[] args) {
 		PhysicData[] x = {
 			new PhysicData("박현규", 162, 0.3),
-			new PhysicData("함진아", 175, 0.7),
+			new PhysicData("함진아", 175, 0.3),
 			new PhysicData("최윤미", 175, 2.0),
 			new PhysicData("홍연의", 171, 1.5),
-			new PhysicData("이수진", 168, 0.4),
+			new PhysicData("이수진", 168, 0.3),
 			new PhysicData("김영준", 174, 1.2),
 			new PhysicData("박용규", 169, 0.8),
 		};
@@ -57,8 +57,13 @@ public class PhysicalExamination {
 
 		System.out.println("\n시력 분포");
 
-		for (int i = 0; i < VMAX; i++)
-			System.out.printf("%3.1f～: %2d명\n", i / 10.0, vdist[i]);
+		for (int i = 0; i < VMAX; i++) {
+			System.out.printf("%3.1f～: ", i / 10.0);
+			for (int j = 0; j < vdist[i]; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 
 	}
 }
