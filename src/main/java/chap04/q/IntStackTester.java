@@ -7,7 +7,8 @@ import chap04.IntStack;
 public class IntStackTester {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		IntStack s = new IntStack(64);
+		// IntStack s = new IntStack(64);
+		MyStack<Integer> s = new MyStack<>(64);
 
 		while (true) {
 			System.out.println(); // 메뉴 구분을 위한 빈 행 추가
