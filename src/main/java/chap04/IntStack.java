@@ -29,4 +29,10 @@ public class IntStack {
 			throw new OverflowIntStackException();
 		return stk[ptr++] = x;
 	}
+
+	public int pop() {
+		if (ptr <= 0)
+			throw new EmptyIntStackException();
+		return stk[--ptr];
+	}
 }
