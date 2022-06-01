@@ -23,4 +23,10 @@ public class IntStack {
 			max = 0;
 		}
 	}
+
+	public int push(int x) {
+		if (ptr >= max)
+			throw new OverflowIntStackException();
+		return stk[ptr++] = x;
+	}
 }
