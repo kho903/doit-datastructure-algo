@@ -22,7 +22,7 @@ public class BubbleSortV2 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("Bubble Sort V1");
+		System.out.println("Bubble Sort V2");
 		int[] a = {3, 2, 5, 1, 9, 7, 8};
 		bubbleSort(a, a.length);
 		System.out.println(Arrays.toString(a));
