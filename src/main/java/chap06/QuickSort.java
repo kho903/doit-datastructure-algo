@@ -14,6 +14,11 @@ public class QuickSort {
 		int pr = right;
 		int pivot = a[(pl + pr) / 2];
 
+		System.out.printf("a[%d]~a[%d] : {", left, right);
+		for (int i = left; i < right; i++)
+			System.out.printf("%d, ", a[i]);
+		System.out.printf("%d}\n", a[right]);
+
 		do {
 			while (a[pl] < pivot) pl++;
 			while (a[pr] > pivot) pr--;
