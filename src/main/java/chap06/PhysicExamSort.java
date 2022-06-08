@@ -21,6 +21,7 @@ public class PhysicExamSort {
 		}
 
 		static final Comparator<PhysicData> HEIGHT_ORDER = new HeightOrderComparator();
+		static final Comparator<PhysicData> VISION_ORDER = new VisionOrderComparator();
 
 		private static class HeightOrderComparator implements Comparator<PhysicData> {
 			@Override
@@ -30,6 +31,13 @@ public class PhysicExamSort {
 			}
 		}
 
+		private static class VisionOrderComparator implements Comparator<PhysicData> {
+
+			@Override
+			public int compare(PhysicData o1, PhysicData o2) {
+				return Double.compare(o2.vision, o1.vision);
+			}
+		}
 	}
 
 	public static void main(String[] args) {
@@ -44,7 +52,8 @@ public class PhysicExamSort {
 		};
 
 		Arrays.sort(x,
-			PhysicData.HEIGHT_ORDER
+			// PhysicData.HEIGHT_ORDER
+			PhysicData.VISION_ORDER
 		);
 
 		for (PhysicData p : x) {
